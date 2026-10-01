@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IMPORTANT NOTICE 🚨</title>
+<style>
+*{box-sizing:border-box} body{margin:0;min-height:100vh;background:linear-gradient(135deg,#17122b,#30205c 55%,#111827);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff;display:flex;align-items:center;justify-content:center;padding:22px}
+.card{width:min(430px,100%);background:rgba(255,255,255,.1);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:28px;box-shadow:0 25px 70px rgba(0,0,0,.35)}
+.badge{display:inline-block;background:#ffcf33;color:#171717;font-weight:800;border-radius:999px;padding:7px 12px;font-size:12px}
+h1{font-size:28px;margin:16px 0 8px}.sub{color:#cfc8e8;line-height:1.5}
+.score{margin:22px 0;padding:18px;border-radius:20px;background:rgba(0,0,0,.2);text-align:center}
+.score b{font-size:48px}.bar{height:9px;background:#493d63;border-radius:20px;overflow:hidden;margin-top:12px}.fill{width:70%;height:100%;background:#ffcf33}
+ul{padding-left:21px;color:#eee;line-height:1.7}.warning{font-size:19px;font-weight:800;text-align:center;margin:22px 0 16px}
+button{width:100%;border:0;border-radius:15px;padding:15px;margin-top:10px;font-size:16px;font-weight:800;cursor:pointer}
+.agree{background:#fff;color:#21183d}.amends{background:#ffcf33;color:#21183d}
+.small{text-align:center;color:#aaa1bf;font-size:11px;margin-top:20px}
+.overlay{position:fixed;inset:0;background:rgba(5,3,12,.82);display:none;align-items:center;justify-content:center;padding:24px;z-index:5}
+.modal{max-width:390px;background:#fff;color:#20172f;border-radius:26px;padding:28px;text-align:center;box-shadow:0 25px 80px #000}
+.modal h2{font-size:27px;margin:5px 0 12px}.modal p{line-height:1.55}.close{background:#20172f;color:white;margin-top:12px}
+.shake{animation:shake .45s}@keyframes shake{25%{transform:translateX(-7px)}50%{transform:translateX(7px)}75%{transform:translateX(-4px)}}
+</style>
+</head>
+<body>
+<main class="card" id="card">
+  <span class="badge">🚨 IMPORTANT NOTICE 🚨</span>
+  <h1>IMPORTANT NOTICE 🚨</h1>
+  <div class="sub">Our highly sophisticated monitoring system has completed a routine review of your recent performance.</div>
+
+  <div class="score">
+    <div>Current Wa’ed Credits™</div>
+    <b>70 / 100</b>
+    <div class="bar"><div class="fill"></div></div>
+  </div>
+
+  <div class="sub">Several violations have been detected:</div>
+  <ul>
+    <li>⚠️ Insufficient attention</li>
+    <li>⚠️ Suspicious levels of disappearing</li>
+    <li>⚠️ Potential lying detected</li>
+    <li>⚠️ General lack of satisfactory Motasem behavior</li>
+  </ul>
+
+  <div class="warning">🔒 You are officially grounded for ONE MONTH.</div>
+
+  <div class="sub">Your ability to receive spontaneous replies will depend entirely on the concerned authority. Appeals are currently unavailable. 😌</div>
+
+  <button class="agree" onclick="agree()">🟢 I AGREE</button>
+  <button class="amends" onclick="amends()">🟡 I WANT TO MAKE AMENDS</button>
+  <div class="small">IMPORTANT NOTICE 🚨 · Department of Wa’ed Affairs™ · Case #W-70100</div>
+</main>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div style="font-size:52px">😂</div>
+    <h2>HAHAHAHA. NICE TRY, BIG GUY.</h2>
+    <p>You thought you could simply make amends and walk away?!</p>
+    <p><b>Unfortunately, the Amends Department is currently closed.</b></p>
+    <p>Your sentence remains:</p>
+    <div style="font-size:31px;font-weight:900">🔒 1 MONTH.</div>
+    <p>Use this time for self-reflection, personal growth, and thinking very carefully about your future behavior.</p>
+    <button class="close" onclick="closeModal()">Okay… 😭</button>
+  </div>
+</div>
+
+<script>
+function amends(){
+ document.getElementById('overlay').style.display='flex';
+}
+function closeModal(){document.getElementById('overlay').style.display='none'}
+function agree(){
+ document.getElementById('card').classList.add('shake');
+ setTimeout(()=>document.getElementById('card').classList.remove('shake'),500);
+ alert("Agreement accepted. Your one-month grounding remains fully active. 😌");
+}
+</script>
+</body>
+</html>
